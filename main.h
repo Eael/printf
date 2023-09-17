@@ -28,6 +28,6 @@ int print_number(int n);
 int char_handler(va_list args);
 int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
-int digit_handler(va_list args)
+int digit_handler(va_list args);
 
 #endif
