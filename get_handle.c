@@ -23,7 +23,7 @@ int (*get_handler(char spec))(va_list)
 	{
 		if (*(sp[i].specifier) == spec)
 		{
-			return (sp[i].handler)
+			return (sp[i].handler);
 		}
 	}
 	return (NULL);
