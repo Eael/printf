@@ -22,16 +22,10 @@ int _putchar(char c)
  */
 void _puts(char *str)
 {
-	int l;
-	int i = 0;
-
-	while (str[i] != '\0')
+	while (*str)
 	{
-		i++;
-	}
-	for (l = 0; l < i; l += 2)
-	{
-		_putchar(str[l]);
+		_putchar(*str);
+		str++;
 	}
 }
 

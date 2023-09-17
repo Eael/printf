@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, char_count = 0;
+	int i, char_count = 0;
 	va_list args;
 	int (*function)(va_list);
 
@@ -17,29 +17,32 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	while (format[i] != '\0')
+	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] != '%')
 		{
-			if (format[i + 1] == ' ' || format[i + 1] == '\0')
+			_putchar(format[i]);
+			char_count++;
+		}
+		else if (format[i] == '%')
 			{
-				return (-1);
-			}
-			i++;
-			function = get_handler(format[i]);
-
-			if (function != NULL)
-			{
-				char_count += function(args);
+				if (format[i + 1] == ' ' || format[i + 1] == '\0')
+				{
+					va_end(args);
+					return (-1);
+				}
 				i++;
-				continue;
-			}
-			else
-			{
-				_putchar('%');
-				char_count++;
-				continue;
-			}
+				function = get_handler(format[i]);
+
+				if (function != NULL)
+				{
+					char_count += function(args);
+				}
+				else
+				{
+					_putchar('%');
+					char_count++;
+				}
 		}
 	}
 	va_end(args);
