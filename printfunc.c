@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * char_handler - handles character
- * @va_list: the format specifier eg 'c','s', "%"
+ * _printf - handles character
+ * @format: the format specifier eg 'c','s', "%"
+ * @...: variadic parameters
  *
  * Return: Always 0 on success
  */
@@ -10,8 +11,8 @@ int _printf(const char *format, ...)
 	int i = 0, char_count = 0;
 	va_list args;
 	int (*function)(va_list);
-	va_start(args, format);
 
+	va_start(args, format);
 	if (format == NULL)
 	{
 		return (-1);
@@ -35,16 +36,12 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
+				_putchar("%");
 				char_count++;
 				continue;
 			}
 		}
-		else
-		{
-			_putchar(format[i]);
-			i++
-		}
 	}
 	va_end(args);
-	
+	return (char_count);
 }

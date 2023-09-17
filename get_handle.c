@@ -12,8 +12,10 @@ int (*get_handler(char spec))(va_list)
 
 	func_t sp[] = {
 		{"c", char_handler},
-		{'%', percent_handler},
+		{"%", percent_handler},
 		{"s", string_handler},
+		{"d", digit_handler},
+		{"i", digit_handler},
 		{NULL, NULL}
 	};
 

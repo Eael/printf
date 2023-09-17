@@ -6,12 +6,12 @@
 #include <stdarg.h>
 
 /**
- * struct func - Struct op
+ * struct func - Struct function
  *
  * @specifier: the format specifier eg 'c','s', "%"
  * @handler: The function pointer to handle the specifier
  */
-typedef struct
+typedef struct func
 {
 	char *specifier;
 	int (*handler)(va_list);
