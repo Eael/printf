@@ -17,10 +17,16 @@ typedef struct func
 	int (*handler)(va_list);
 } func_t;
 
+int (*get_handler(char spec))(va_list);
 int _printf(const char *format, ...);
 
 int _putchar(char c);
 void _puts(char *str);
 void print_number(int n);
+
+int char_handler(va_list args);
+int string_handler(va_list args);
+int percent_handler(va_list args __attribute__((unused)));
+int digit_handler(va_list args);
 
 #endif
