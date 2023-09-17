@@ -8,7 +8,7 @@
  */
 int (*get_handler(char spec))(va_list)
 {
-	int i;
+	int i = 0;
 
 	func_t sp[] = {
 		{"c", char_handler},
@@ -21,11 +21,10 @@ int (*get_handler(char spec))(va_list)
 
 	while (sp[i].specifier != NULL)
 	{
-		if (_strcmp(sp[i].specifier, spec) == 0)
+		if (*(sp[i].specifier) == spec)
 		{
-			return (sp[i].handler);
+			return (sp[i].handler)
 		}
-		i++;
 	}
 	return (NULL);
 }

@@ -22,7 +22,6 @@ int _printf(const char *format, ...);
 
 int _putchar(char c);
 void _puts(char *str);
-int _strcmp(char *s1, char *s2);
 int print_number(int n);
 
 int char_handler(va_list args);

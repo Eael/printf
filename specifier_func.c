@@ -19,7 +19,7 @@ int char_handler(va_list args)
  */
 int string_handler(va_list args)
 {
-	_puts(va_arg(args, const char *));
+	_puts(va_arg(args, char *));
 	return (0);
 }
 
@@ -31,7 +31,7 @@ int string_handler(va_list args)
  */
 int percent_handler(va_list args __attribute__((unused)))
 {
-	_putchar('%');
+	_putchar("%");
 	return (0);
 }
 
