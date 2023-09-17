@@ -62,7 +62,7 @@ int _strcmp(char *s1, char *s2)
  * print_number - prints an integer
  * @n: integer to be printed
  */
-void print_number(int n)
+int print_number(int n)
 {
 	unsigned int n1;
 

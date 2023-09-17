@@ -23,11 +23,11 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 void _puts(char *str);
 int _strcmp(char *s1, char *s2);
-void print_number(int n);
+int print_number(int n);
 
 int char_handler(va_list args);
 int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
-int digit_handler(va_list args __attribute__((unused)))
+int digit_handler(va_list args)
 
 #endif
