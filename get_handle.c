@@ -25,6 +25,7 @@ int (*get_handler(char spec))(va_list)
 		{
 			return (sp[i].handler);
 		}
+		i++;
 	}
 	return (NULL);
 }

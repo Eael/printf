@@ -10,18 +10,28 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	int res = (write(1, &c, 1));
+	if (res < 0)
+	{
+		return (-1);
+	}
+	return (res);
 }
 
 
 /**
- * _puts - prints every other string
+ * _puts - prints all of string
  * @str: pointer to the string
  *
  * Return: string
  */
 void _puts(char *str)
 {
+	if (str == NULL)
+	{
+		return;
+	}
+
 	while (*str)
 	{
 		_putchar(*str);
@@ -31,15 +41,22 @@ void _puts(char *str)
 
 
 /**
- * _print_buffer - prints a buffer to stdout
- * @buf: the buffer to print
- * @size: the size of the buffer
- * @char_count: pointer to the character count
+ * print_number - prints an integer
+ * @n: integer to be printed
  */
-void _print_buffer(char *buf, int size, int *char_count)
+void print_number(int n)
 {
-    write(1, buf, size);
-    *char_count += size;
+	unsigned int n1;
+
+	if (n < 0) {
+		n1 = -n;
+		_putchar('-');
+	} else {
+		n1 = n;
+	}
+
+	if (n1 / 10) {
+		print_number(n1 / 10);
+	}
+	_putchar((n1 % 10) + '0');
 }
-
-
