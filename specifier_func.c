@@ -28,7 +28,7 @@ int string_handler(va_list args)
 	if (str == NULL)
 	{
 		_puts("(null)");
-		return (-1);
+		return (6);
 	}
 	while (str[c])
 	{
@@ -47,7 +47,7 @@ int string_handler(va_list args)
 int percent_handler(va_list args __attribute__((unused)))
 {
 	int c;
-	
+
 	c = _putchar('%');
 	return (c);
 }
