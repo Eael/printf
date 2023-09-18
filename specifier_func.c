@@ -47,7 +47,7 @@ int string_handler(va_list args)
 int percent_handler(va_list args __attribute__((unused)))
 {
 	int c;
-
+	
 	c = _putchar('%');
 	return (c);
 }
@@ -60,5 +60,6 @@ int percent_handler(va_list args __attribute__((unused)))
  */
 int digit_handler(va_list args)
 {
-	return (print_number(va_arg(args, int)));
+	print_number(va_arg(args, int));
+	return (0);
 }
