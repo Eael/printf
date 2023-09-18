@@ -13,12 +13,10 @@ int _printf(const char *format, ...)
 	int (*function)(va_list);
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 
 	va_start(args, format);
-	
+
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] != '%')
@@ -35,17 +33,14 @@ int _printf(const char *format, ...)
 				}
 				i++;
 				function = get_handler(format[i]);
-
 				if (function != NULL)
-				{
 					char_count += function(args);
-				}
 				else
 				{
 					_putchar('%');
 					char_count++;
 				}
-		}
+			}
 	}
 	va_end(args);
 	return (char_count);

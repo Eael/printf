@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * char_handler - handles character
- * @va_list: the format specifier eg 'c','s', "%"
+ * @args: the format specifier eg 'c','s', "%"
  *
  * Return: Always 0 on success
  */
@@ -13,7 +13,7 @@ int char_handler(va_list args)
 
 /**
  * string_handler - handles string
- * @va_list: the format specifier eg 'c','s', "%"
+ * @args: the format specifier eg 'c','s', "%"
  *
  * Return: Always 0 on success
  */
@@ -25,7 +25,7 @@ int string_handler(va_list args)
 
 /**
  * percent_handler - handles character
- * @va_list: the format specifier eg 'c','s', "%"
+ * @args: the format specifier eg 'c','s', "%"
  *
  * Return: Always 0 on success
  */
@@ -36,8 +36,8 @@ int percent_handler(va_list args __attribute__((unused)))
 }
 
 /**
- * char_handler - handles character
- * @va_list: the format specifier eg 'c','s', "%"
+ * digit_handler - prints an integer
+ * @args: the format specifier eg 'c','s', "%"
  *
  * Return: Always 0 on success
  */

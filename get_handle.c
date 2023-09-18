@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * get_handler - handles character
- * @specifier: the specifier
+ * @spec: the specifier
  * @va_list: the format specifier eg 'c','s', "%"
  *
  * Return: Always 0 on success
