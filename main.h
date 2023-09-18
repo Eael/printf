@@ -9,7 +9,7 @@
 /**
  * struct func - Struct function
  *
- * @specifier: the format specifier eg 'c','s', "%"
+ * @specifier: the format specifier eg 'c','s', '%'
  * @handler: The function pointer to handle the specifier
  */
 typedef struct func
@@ -18,16 +18,21 @@ typedef struct func
 	int (*handler)(va_list);
 } func_t;
 
+/* get_handle*/
 int (*get_handler(char spec))(va_list);
+
+/* printfunc */
 int _printf(const char *format, ...);
 
+/* function.c*/
 int _putchar(char c);
 void _puts(char *str);
-void print_number(int n);
 
+/* specifier_func*/
+void print_number(int n);
 int char_handler(va_list args);
 int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
 int digit_handler(va_list args);
-void _print_buffer(char *buf, int size, int *char_count);
+
 #endif
