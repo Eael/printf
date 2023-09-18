@@ -20,6 +20,9 @@ int main(void)
     _printf("Negative:[%s]\n", str);
     _printf("character %c\n", c);
     _printf("percentage %% nd string %s \n", str);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+    _printf("Length:[%d, %i]\n", len, len);
     
     return (0);
 }
