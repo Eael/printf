@@ -18,12 +18,13 @@ int (*get_handler(char spec))(va_list)
 		{NULL, NULL}
 	};
 
-	for (; sp[i].specifier != NULL; i++)
+	while (sp[i].specifier != NULL)
 	{
 		if (*(sp[i].specifier) == spec)
 		{
 			return (sp[i].handler);
 		}
+		i++;
 	}
 	return (NULL);
 }
