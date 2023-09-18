@@ -9,11 +9,11 @@
  */
 int _putchar(char c)
 {
-        int res = (write(1, &c, 1));
+		int res = (write(1, &c, 1));
 
-        if (res < 0)
-        {
-                return (-1);
-        }
-        return (res);
+		if (res < 0)
+		{
+				return (-1);
+		}
+		return (res);
 }
