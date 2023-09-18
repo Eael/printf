@@ -7,8 +7,10 @@
  */
 int char_handler(va_list args)
 {
-	_putchar(va_arg(args, int));
-	return (1);
+	int c;
+
+	c = _putchar(va_arg(args, int));
+	return (c);
 }
 
 /**
@@ -19,13 +21,21 @@ int char_handler(va_list args)
  */
 int string_handler(va_list args)
 {
+	int c = 0;
 	char *str;
 
 	str = va_arg(args, char *);
-	if (!str)
-		str = ("(null)");
-
-	return (_puts(str));
+	if (str == NULL)
+	{
+		_puts("(null)");
+		return (6);
+	}
+	while (str[c])
+	{
+		_putchar(str[c]);
+		c++;
+	}
+	return (c);
 }
 
 /**
@@ -34,11 +44,12 @@ int string_handler(va_list args)
  *
  * Return: Always 0 on success
  */
-int percent_handler(va_list args)
+int percent_handler(va_list args __attribute__((unused)))
 {
-	(void)args;
+	int c;
 
-	return (_putchar('%'));
+	c = _putchar('%');
+	return (c);
 }
 
 /**

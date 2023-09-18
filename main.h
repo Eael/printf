@@ -22,7 +22,7 @@ int (*get_handler(char spec))(va_list);
 int _printf(const char *format, ...);
 
 int _putchar(char c);
-int _puts(char *str);
+void _puts(char *str);
 void print_number(int n);
 
 int char_handler(va_list args);
