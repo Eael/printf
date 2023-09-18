@@ -7,8 +7,10 @@
  */
 int char_handler(va_list args)
 {
-	_putchar(va_arg(args, int));
-	return (0);
+	int c;
+
+	c = _putchar(va_arg(args, int));
+	return (c);
 }
 
 /**
@@ -19,8 +21,21 @@ int char_handler(va_list args)
  */
 int string_handler(va_list args)
 {
-	_puts(va_arg(args, char *));
-	return (0);
+	int c = 0;
+	char *str;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+	{
+		_puts("(null)");
+		return (-1);
+	}
+	while (str[c])
+	{
+		_putchar(str[c]);
+		c++;
+	}
+	return (c);
 }
 
 /**
@@ -31,8 +46,9 @@ int string_handler(va_list args)
  */
 int percent_handler(va_list args __attribute__((unused)))
 {
-	_putchar('%');
-	return (0);
+	int c;
+	c = _putchar('%');
+	return (c);
 }
 
 /**
@@ -43,6 +59,8 @@ int percent_handler(va_list args __attribute__((unused)))
  */
 int digit_handler(va_list args)
 {
-	print_number(va_arg(args, int));
-	return (0);
+	int c;
+
+	c = print_number(va_arg(args, int));
+	return (c);
 }
