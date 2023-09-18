@@ -24,20 +24,15 @@ int _putchar(char c)
  * _puts - prints all of string
  * @str: pointer to the string
  *
- * Return: string
+ * Return: number of chars written
  */
-void _puts(char *str)
+int _puts(char *str)
 {
-	if (str == NULL)
-	{
-		return;
-	}
+	int i; 
 
-	while (*str)
-	{
-		_putchar(*str);
-		str++;
-	}
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }
 
 
