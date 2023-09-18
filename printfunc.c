@@ -25,22 +25,22 @@ int _printf(const char *format, ...)
 			char_count++;
 		}
 		else if (format[i] == '%')
+		{
+			if (format[i + 1] == ' ' || format[i + 1] == '\0')
 			{
-				if (format[i + 1] == ' ' || format[i + 1] == '\0')
-				{
-					va_end(args);
-					return (-1);
-				}
-				i++;
-				function = get_handler(format[i]);
-				if (function != NULL)
-					char_count += function(args);
-				else
-				{
-					_putchar('%');
-					char_count++;
-				}
+				va_end(args);
+				return (-1);
 			}
+			i++;
+			function = get_handler(format[i]);
+			if (function != NULL)
+				char_count += function(args);
+			else
+			{
+				_putchar('%');
+				char_count++;
+			}
+		}
 	}
 	va_end(args);
 	return (char_count);

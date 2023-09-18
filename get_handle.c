@@ -2,7 +2,6 @@
 /**
  * get_handler - handles character
  * @spec: the specifier
- * @va_list: the format specifier eg 'c','s', "%"
  *
  * Return: Always 0 on success
  */
