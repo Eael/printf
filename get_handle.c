@@ -3,7 +3,7 @@
  * get_handler - handles character
  * @spec: the specifier
  *
- * Return: Always 0 on success
+ * Return: Returns a handler function
  */
 int (*get_handler(char spec))(va_list)
 {
