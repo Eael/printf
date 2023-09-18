@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define BUFFER_SIZE 1024
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -28,5 +30,5 @@ int char_handler(va_list args);
 int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
 int digit_handler(va_list args);
-
+void _print_buffer(char *buf, int size, int *char_count);
 #endif
