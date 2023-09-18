@@ -43,36 +43,6 @@ int percent_handler(va_list args __attribute__((unused)))
  */
 int digit_handler(va_list args)
 {
-    char buffer[BUFFER_SIZE];
-    int n = va_arg(args, int);
-    int i = 0;
-    int char_count = 0;
-
-    if (n < 0)
-    {
-        _putchar('-');
-        char_count++;
-        n = -n;
-    }
-
-    do
-    {
-        buffer[i++] = (n % 10) + '0';
-        n /= 10;
-    } while (n > 0);
-
-    for (i--; i >= 0; i--)
-    {
-        if (char_count == BUFFER_SIZE)
-        {
-            _print_buffer(buffer, BUFFER_SIZE, &char_count);
-            i++;
-            continue;
-        }
-        buffer[char_count++] = buffer[i];
-    }
-
-    _print_buffer(buffer, char_count, &char_count);
-
-    return (char_count);
+	print_number(va_arg(args, int));
+	return (0);
 }
