@@ -13,7 +13,7 @@ int _putchar(char c)
 
 		if (res < 0)
 		{
-				return (-1);
+			return (-1);
 		}
 		return (res);
 }
