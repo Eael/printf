@@ -38,7 +38,7 @@ int percent_handler(va_list args)
 {
 	(void)args;
 
-	return (_putchar('%'))
+	return (_putchar('%'));
 }
 
 /**
