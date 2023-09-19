@@ -60,6 +60,8 @@ int percent_handler(va_list args __attribute__((unused)))
  */
 int digit_handler(va_list args)
 {
-	print_number(va_arg(args, int));
-	return (0);
+	int counter;
+
+	counter = print_int(va_arg(args, int));
+	return (counter);
 }

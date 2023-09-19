@@ -27,9 +27,10 @@ int _printf(const char *format, ...);
 /* function.c*/
 int _putchar(char c);
 void _puts(char *str);
+int print_int(int d);
+void print_number(int n);
 
 /* specifier_func*/
-void print_number(int n);
 int char_handler(va_list args);
 int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
