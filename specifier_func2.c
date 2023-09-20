@@ -7,8 +7,8 @@
  */
 int print_u(va_list args)
 {
-	int count;
-	unsigned int num;
+	unsigned count;
+	unsigned num;
 
 	num = va_arg(args, unsigned int);
 

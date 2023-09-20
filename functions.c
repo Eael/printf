@@ -115,7 +115,7 @@ int print_rev(va_list args)
  *
  * Return: number of chars written
  */
-int print_unsigned(unsigned int d)
+int print_unsigned(unsigned d)
 {
 	char *buffer = NULL;
 	unsigned int temp = d, size;
