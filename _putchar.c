@@ -9,18 +9,11 @@
  */
 int _putchar(char c)
 {
-	static char buf[1024];
-	static int i;
+	int res = (write(1, &c, 1));
 
-	if (c == -1 || i >= 1024)
+	if (res < 0)
 	{
-		write(1, &buf, i);
-		i = 0;
+		return (-1);
 	}
-	if (c != -1)
-	{
-		buf[i] = c;
-		i++;
-	}
-	return (1);
+	return (res);
 }
