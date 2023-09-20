@@ -119,7 +119,7 @@ int print_unsigned(unsigned int d)
 {
 	char *buffer = NULL;
 	unsigned int temp = d, size;
-	int num_of_digits = 0;
+	unsigned int num_of_digits = 0;
 	int i;
 	unsigned int num;
 
