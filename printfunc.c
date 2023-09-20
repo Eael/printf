@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				_putchar('%');
-				char_count += _putchar(format[i]);
+				char_count++;
 			}
 		}
 	}
