@@ -30,12 +30,13 @@ int _printf(const char *format, ...)
 			i++;
 			function = get_handler(format[i]);
 			if (function != NULL)
+			{
 				char_count += function(args);
+			}
 			else
 			{
 				_putchar('%');
-				_putchar(format[i]);
-				char_count++;
+				char_count += _putchar(format[i]);
 			}
 		}
 	}
