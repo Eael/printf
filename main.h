@@ -23,17 +23,20 @@ int (*get_handler(char spec))(va_list);
 
 /* printfunc */
 int _printf(const char *format, ...);
+/* _putchar*/
+int _putchar(char c);
 
 /* function.c*/
-int _putchar(char c);
 void _puts(char *str);
 int print_int(int d);
-void print_number(int n);
+int rev_string(char *s);
+int print_rev(va_list list);
 
 /* specifier_func*/
 int char_handler(va_list args);
 int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
 int digit_handler(va_list args);
+int print_b(va_list args);
 
 #endif

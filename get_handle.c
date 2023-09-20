@@ -15,6 +15,7 @@ int (*get_handler(char spec))(va_list)
 		{"s", string_handler},
 		{"d", digit_handler},
 		{"i", digit_handler},
+		{"b", print_b},
 		{NULL, NULL}
 	};
 

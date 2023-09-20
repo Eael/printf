@@ -21,31 +21,6 @@ void _puts(char *str)
 	}
 }
 
-
-/**
- * print_number - helper function that loops through
- * an integer and prints all its digits
- * @n: integer to be printed
- */
-void print_number(int n)
-{
-	unsigned int n1;
-
-	if (n < 0)
-	{
-		n1 = -n;
-		_putchar('-');
-	} else
-	{
-		n1 = n;
-	}
-
-	if (n1 / 10)
-		print_number(n1 / 10);
-
-	_putchar((n1 % 10) + '0');
-}
-
 /**
  * print_int - prints decimal integer
  * @d: the integer
@@ -93,4 +68,49 @@ int print_int(int d)
 	free(buffer);
 
 	return (num_of_digits);
+}
+
+/**
+ * rev_string - prints a string in reversee
+ * @s: pointer to the string  we want to reverse
+ *
+ * Return: number of bytes written
+ */
+int rev_string(char *s)
+{
+	int l, l1;
+	int i = 0;
+	char temp;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	l1 = i - 1;
+	for (l = 0; l < i / 2; l++)
+	{
+		temp = s[l];
+		s[l] = s[l1];
+		s[l1--] = temp;
+		_putchar(temp);
+	}
+	return (i);
+}
+
+/**
+ * print_rev - prints a string in reverse from args
+ * @args: the format specifier eg 'c','s', "%"
+ *
+ * Return: number of bytes written
+ */
+int print_rev(va_list list)
+{
+	int count;
+	char *str;
+
+	str = va_arg(list, char *);
+
+	count = rev_string(str);
+
+	return (count);
 }
