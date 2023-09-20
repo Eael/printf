@@ -26,11 +26,16 @@ int _printf(const char *format, ...);
 /* _putchar*/
 int _putchar(char c);
 
-/* function.c*/
+/* functions.c*/
 void _puts(char *str);
 int print_int(int d);
 int rev_string(char *s);
 int print_rev(va_list list);
+int print_unsigned(unsigned int d);
+
+/* functions2.c*/
+int _strlen(char *s);
+int print_uhex(unsigned int num);
 
 /* specifier_func*/
 int char_handler(va_list args);
@@ -38,5 +43,10 @@ int string_handler(va_list args);
 int percent_handler(va_list args __attribute__((unused)));
 int digit_handler(va_list args);
 int print_b(va_list args);
+
+/* specifier_func2*/
+int print_u(va_list args);
+int print_x(va_list args);
+int print_o(va_list args);
 
 #endif

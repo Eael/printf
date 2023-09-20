@@ -108,3 +108,43 @@ int print_rev(va_list args)
 
 	return (count);
 }
+
+/**
+ * print_unsigned - prints decimal integer (unsigned)
+ * @d: the integer
+ *
+ * Return: number of chars written
+ */
+int print_unsigned(unsigned int d)
+{
+	char *buffer = NULL;
+	unsigned int temp = d, size;
+	int num_of_digits = 0;
+	int i;
+	unsigned int num;
+
+	if (d == 0)
+		return (_putchar('0'));
+
+	num = d;
+	while (temp != 0)
+	{
+		num_of_digits++;
+		temp /= 10;
+	}
+	size = num_of_digits + 1;
+	buffer = malloc(sizeof(char) * (size));
+	if (!buffer)
+		return (-1);
+	for (i = size - 2; i >= 0; i--)
+	{
+		buffer[i] = (num % 10) + '0';
+		num /= 10;
+	}
+	buffer[size - 1] = '\0';
+
+	_puts(buffer);
+	free(buffer);
+
+	return (num_of_digits);
+}
