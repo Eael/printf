@@ -19,7 +19,7 @@ int (*get_handler(char spec))(va_list)
 		{"u", print_u},
 		{"o", print_o},
 		{"x", print_x},
-		{"X", print_x},
+		{"X", print_x_upper},
 		{NULL, NULL}
 	};
 

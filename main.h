@@ -36,6 +36,7 @@ int print_unsigned(unsigned int d);
 /* functions2.c*/
 int _strlen(char *s);
 int print_uhex(unsigned int num);
+int print_uhex_upper(unsigned int num);
 
 /* specifier_func*/
 int char_handler(va_list args);
@@ -47,6 +48,7 @@ int print_b(va_list args);
 /* specifier_func2*/
 int print_u(va_list args);
 int print_x(va_list args);
+int print_x_upper(va_list args);
 int print_o(va_list args);
 
 #endif

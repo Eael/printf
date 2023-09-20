@@ -35,6 +35,24 @@ int print_x(va_list args)
 }
 
 /**
+ * print_x_big - prints hexidecimal integer
+ * @args: the list to print from
+ *
+ * Return: the no. of bytes written
+ */
+int print_x_upper(va_list args)
+{
+	int count;
+	int num;
+
+	num = va_arg(args, unsigned int);
+
+	count = print_uhex_upper(num);
+
+	return (count);
+}
+
+/**
  * print_o - prints unsigned int in octal
  * @args: the list to print from
  *
