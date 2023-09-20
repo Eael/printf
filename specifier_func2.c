@@ -35,7 +35,7 @@ int print_x(va_list args)
 }
 
 /**
- * print_x_big - prints hexidecimal integer
+ * print_x_upper - prints hexidecimal integer in upper case
  * @args: the list to print from
  *
  * Return: the no. of bytes written

@@ -55,7 +55,7 @@ int print_uhex(unsigned int num)
 }
 
 /**
- * print_uhex - prints num in hex format
+ * print_uhex_upper - prints num in hex format in upper case
  * @num: the num
  *
  * Return: the printed chars
