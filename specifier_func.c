@@ -81,7 +81,7 @@ int print_b(va_list args)
 	num = va_arg(args, int);
 	if (num == 0)
 		return (_putchar('0'));
-	
+
 	for (i = 0; num > 0; i++)
 	{
 		bin[i] = (num % 2) + '0';
