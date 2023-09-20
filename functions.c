@@ -97,12 +97,12 @@ int rev_string(char *s)
  *
  * Return: number of bytes written
  */
-int print_rev(va_list list)
+int print_rev(va_list args)
 {
 	int count;
 	char *str;
 
-	str = va_arg(list, char *);
+	str = va_arg(args, char *);
 
 	count = rev_string(str);
 
