@@ -1,6 +1,4 @@
 #include "main.h"
-#include <unistd.h>
-
 /**
  * _puts - prints all of string
  * @str: pointer to the string
