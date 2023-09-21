@@ -31,12 +31,13 @@ void _puts(char *str);
 int print_int(int d);
 int rev_string(char *s);
 int print_rev(va_list list);
-int print_unsigned(unsigned int d);
+
 
 /* functions2.c*/
 int _strlen(char *s);
 int print_uhex(unsigned int num);
 int print_uhex_upper(unsigned int num);
+int print_unsigned(unsigned int d);
 
 /* specifier_func*/
 int char_handler(va_list args);
