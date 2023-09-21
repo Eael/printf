@@ -91,7 +91,7 @@ int print_uhex_upper(unsigned int num)
 }
 
 /**
- * print_unsigned - prints decimal integer (unsigned)
+ * print_un - prints decimal integer (unsigned)
  * @d: the integer
  *
  * Return: number of chars written
