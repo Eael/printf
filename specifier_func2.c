@@ -10,7 +10,7 @@ int print_u(va_list args)
 	int num;
 
 	num = va_arg(args, unsigned int);
-	return (print_unsigned(num));
+	return (print_un(num));
 }
 
 /**

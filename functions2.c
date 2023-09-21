@@ -96,7 +96,7 @@ int print_uhex_upper(unsigned int num)
  *
  * Return: number of chars written
  */
-int print_unsigned(unsigned int d)
+int print_un(unsigned int d)
 {
 	char *buffer = NULL;
 	unsigned int temp = d, size;

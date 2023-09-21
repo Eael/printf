@@ -37,7 +37,7 @@ int print_rev(va_list list);
 int _strlen(char *s);
 int print_uhex(unsigned int num);
 int print_uhex_upper(unsigned int num);
-int print_unsigned(unsigned int d);
+int print_un(unsigned int d);
 
 /* specifier_func*/
 int char_handler(va_list args);
