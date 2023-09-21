@@ -28,15 +28,21 @@ int _printf(const char *format, ...)
 				return (-1);
 			}
 			i++;
-			function = get_handler(format[i]);
-			if (function != NULL)
-			{
-				char_count += function(args);
-			}
+
+			if (format[i] == '%')
+				char_count += _putchar('%');
 			else
 			{
-				_putchar('%');
-				char_count++;
+				function = get_handler(format[i]);
+				if (function != NULL)
+				{
+					char_count += function(args);
+				}
+				else
+				{
+					char_count += _putchar('%');
+					char_count += _putchar(format[i]);
+				}
 			}
 		}
 	}
