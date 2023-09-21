@@ -7,13 +7,10 @@
  */
 int print_u(va_list args)
 {
-	unsigned int count;
 	int num;
 
 	num = va_arg(args, unsigned int);
-	count = print_unsigned(num);
-
-	return (count);
+	return (print_unsigned(num));
 }
 
 /**
